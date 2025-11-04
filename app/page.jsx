@@ -117,7 +117,7 @@ export default function LoginPage() {
           className="hidden md:block"
         >
           <Image
-            src="https://res.cloudinary.com/dsndcjfwh/image/upload/v1751213691/login_uflhkw.png"
+            src="/images/login.png"
             alt="Modern App Preview"
             width={800}
             height={500}
