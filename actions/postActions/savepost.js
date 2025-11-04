@@ -9,7 +9,7 @@ export const savepost = async (id) => {
         withCredentials: true
     });
     if (response.status === 200) {
-        console.log(response.data.saved)
+        // console.log(response.data.saved)
       return response.data.saved;
     }
   } catch (error) {

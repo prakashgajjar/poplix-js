@@ -47,7 +47,7 @@ export default function HomeLayout() {
 
   const fetchPosts = useCallback(async () => {
     setLoading(true);
-    if (posts.length >14) {
+    if (posts.length > 14) {
       const newPosts = await getPosts(page); // API should return next 20
       if (newPosts.length < 15) setHasMore(false); // no more pages
       setPosts(prev => [...prev, ...newPosts]);
@@ -149,13 +149,20 @@ export default function HomeLayout() {
             {activeTab === "foryou" ? (
               <div className="p-4 [&>div:last-child]:mb-10">
                 <SendPost />
+                <hr className='opacity-30 mt-5' />
                 <div>
                   {posts.length > 0 ? (
                     posts.map((post) =>
                       post?.isRetweet ? (
-                        <RePostCard key={post._id} post={post?.retweetOf} repostUser={post?.user} />
+                        <div>
+                          <RePostCard key={post._id} post={post?.retweetOf} repostUser={post?.user} />
+                          <hr className='opacity-30 w-full flex mt-3 mb-3' />
+                        </div>
                       ) : (
-                        <Post key={post._id} post={post} />
+                        <div>
+                          <Post key={post._id} post={post} />
+                          <hr className='opacity-30 mt-3 mb-3' />
+                        </div>
                       )
                     )
                   ) : (
@@ -173,9 +180,16 @@ export default function HomeLayout() {
                 {followingPost?.length > 0 ? (
                   followingPost.map((post) =>
                     post?.isRetweet ? (
-                      <RePostCard key={post._id} post={post?.retweetOf} repostUser={post?.user} />
+                      <div>
+                        <RePostCard key={post._id} post={post?.retweetOf} repostUser={post?.user} />
+                        <hr className='opacity-30 mt-3 mb-3' />
+
+                      </div>
                     ) : (
-                      <Post key={post._id} post={post} />
+                      <div>
+                        <Post key={post._id} post={post} />
+                        <hr className='opacity-30 mt-3 mb-3' />
+                      </div>
                     )
                   )
                 ) : (

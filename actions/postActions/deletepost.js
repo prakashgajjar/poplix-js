@@ -13,7 +13,7 @@ export const deletepost = async ( postId ) => {
       }
     );
     if (response.status === 200) {
-      console.log(response);
+      // console.log(response);
       return response;
     }
   } catch (error) {

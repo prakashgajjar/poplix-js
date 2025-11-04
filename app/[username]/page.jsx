@@ -125,8 +125,7 @@ export default function ProfilePage() {
               <div className="relative group w-24 h-24">
                 <Image
                   src={
-                    profile.avatar ||
-                    "https://res.cloudinary.com/dsndcjfwh/image/upload/v1749358852/user_irazfm.png"
+                    profile.avatar || "/logos/user.png"
                   }
                   alt="Profile"
                   width={96}
@@ -172,25 +171,35 @@ export default function ProfilePage() {
 
             <div className="mt-4">
               <div className="grid grid-cols-3 gap-[1px] bg-black">
-                {profile.posts?.length > 0 ? (
-                  profile.posts.map((post) => (
-                    <div
-                      key={post._id}
-                      onTouchStart={() => handlePressStart(post)}
-                      onTouchEnd={handlePressEnd}
-                      onTouchCancel={handlePressEnd}
-                      onMouseDown={() => handlePressStart(post)}
-                      onMouseUp={handlePressEnd}
-                      onContextMenu={(e) => e.preventDefault()}
-                      className="last:mb-20"
-                    >
-                      <MediaCard post={post} />
-                    </div>
-                  ))
+                {profile.posts &&
+                  profile.posts.filter(
+                    (post) => post.type === "image" || post.type === "video"
+                  ).length > 0 ? (
+                  profile.posts
+                    .filter((post) => post.type === "image" || post.type === "video")
+                    .map((post) => (
+                      <div
+                        key={post._id}
+                        onTouchStart={() => handlePressStart(post)}
+                        onTouchEnd={handlePressEnd}
+                        onTouchCancel={handlePressEnd}
+                        onMouseDown={() => handlePressStart(post)}
+                        onMouseUp={handlePressEnd}
+                        onContextMenu={(e) => e.preventDefault()}
+                        className="last:mb-20"
+                      >
+                        <div>
+                          <MediaCard post={post} />
+                        </div>
+                      </div>
+                    ))
                 ) : (
-                  <p className="col-span-full text-center text-white py-6">No posts yet</p>
+                  <div className="col-span-3 flex flex-col items-center justify-center py-10 text-gray-400">
+                    <p className="text-lg font-medium">No posts yet</p>
+                  </div>
                 )}
               </div>
+
 
               {showPost && postData && (
                 <PostShow post={postData} onClose={() => setShowPost(false)} />

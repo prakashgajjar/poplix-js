@@ -4,8 +4,8 @@ export default function Head() {
     <>
       <title>Poplix</title>
       <link rel="manifest" href="/manifest.json" />
-      <meta name="theme-color" content="#10B981" />
-      <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+      <meta name="theme-color" content="#0A0A0A" />
+      <link rel="apple-touch-icon" href="/icons/poplix1.png" />
     </>
   )
 }

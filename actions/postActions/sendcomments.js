@@ -14,11 +14,7 @@ import toast from "react-hot-toast";
       // console.log(response.data);
       if (response.status === 200) {
         const data = response.data;
-        if(data){
-          toast.success("comment addes!");
-        }else{
-          toast.success("something wrong”");
-        }
+
         return data;
       }
     } catch (error) {
