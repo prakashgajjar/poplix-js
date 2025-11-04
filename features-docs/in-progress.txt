@@ -1,0 +1,25 @@
+hey models are completed just now move to the login and signup page with email varification 
+then move to multer with cloudanary store images and videos 
+    
+
+now pendding works
+------------------
+
+
+-delete and upadte the post
+-upadte the profile 
+-delete account
+-one to one chat with user 
+-group chat with users 
+-ai chat                   : start working 
+-ai voice talk 
+-new post notification 
+-explore serach the post and users 
+-payent gatway for premium feature 
+-post like for anytime access 
+-share post to following uses 
+
+
+-advance chat feature like send a photo and video also try to send a live location 
+-add music with the post make a music libraries 
+-make a stroie feature but high advace feature 

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+::-webkit-scrollbar {
+  width: 2px; /* 👈 make this as thin as you want */
+  height: 2px;
+}
+
+/* Track background */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb (the scroll handle) */
+::-webkit-scrollbar-thumb {
+  background-color: #888;    /* or any color you want */
+  border-radius: 12px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add to globals.css or Tailwind config */
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 5px #00f0ff);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #8e2eff);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #ff4fcf);
+  }
+}
+
+@keyframes pulseWave {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.noselect {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+.input-style {
+  @apply w-full p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.btn-style {
+  @apply w-full p-3 rounded text-white font-semibold transition-all;
+}

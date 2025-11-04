@@ -1,0 +1,66 @@
+🚀 Phase 1: Core Features (MVP)
+🔧 Feature	💬 Description
+🎤 Voice-to-Text (STT)	Record user's voice & transcribe it using Google STT or Whisper
+🤖 AI Interviewer (Text only)	AI asks questions and evaluates answers using Gemini / GPT / Claude
+📝 Text Feedback	AI gives textual feedback (confidence score, suggestions, summary)
+🔊 Text-to-Speech (TTS)	Gemini’s reply is converted to speech using Google TTS
+📄 Interview History	Save past interviews + scores per session
+
+💎 Phase 2: Advanced Features
+🌟 Feature	💬 Description
+🧠 Custom Interviewer Persona	Choose interviewer style: HR, Tech Lead, CEO, Funny HR, etc. (via prompt)
+🎙️ Multiple Voice Options	Let users select voice/accent for AI interviewer (TTS voice selector)
+🧪 Question Categories	Tech, HR, Behavioral, Situational, etc.
+🧾 Scoring System	Rate answers: Clarity, Confidence, Relevance, Technical Depth
+📊 Performance Report	Generate AI report with graphs, scores, and tips (PDF download)
+📤 Resume Analyzer (Upload CV)	User uploads CV → AI gives suggestions, detects inconsistencies
+⏱️ Timer/Stress Mode	Enable timer for high-pressure simulation
+🧑‍💻 Coding Round (Optional)	Add real coding questions (with Monaco editor or embedded Judge0)
+🧑‍⚖️ AI Judge Mode	Ask 1 question → show 3 sample answers → let AI rate them
+
+🤖 Phase 3: Premium AI Features (Top Level Baby 😘)
+👑 Feature	💬 Description
+🧬 Personalized Feedback Model	AI learns from past interviews and gives custom improvement paths
+📹 Video Interview (AI Camera)	Show animated interviewer avatar, record user's video
+🗂️ Multiple Interview Rounds	Tech + Manager + HR rounds with different AI personas
+📥 Import Job Description (JD)	User pastes JD → AI asks relevant questions only
+📢 Real-time Hint System	AI gives subtle hints if user struggles (like real mock interviews)
+🎯 Interview Goal Tracking	Long-term improvement dashboard with weekly mock plans
+🔐 Secure Sharing Link	Generate interview link to share with mentors/recruiters
+🌍 Multi-Language Interview	Support for interviews in Hindi, English, French, etc.
+
+✨ Bonus Personalization
+💖 Feature	💬 Cute & Cool Ideas
+🧸 Interviewer Avatar	Let user pick AI interviewer avatar (CEO with glasses, Funny HR, etc.)
+🌈 Theme Customization	Dark mode, Office-style, Classroom-style interfaces
+🎉 Feedback Reactions	Add emoji reactions with audio ("Well done!", “Hmm, needs clarity!”)
+📆 Interview Scheduler	Schedule auto-reminders via email / calendar
+
+🧠 Sneha’s Pro Tip for Scaling 💻
+Build your platform like this:
+
+Use Next.js (App Router)
+
+Add Supabase or MongoDB for user data
+
+Use Google TTS + STT
+
+AI: GPT-4o or Claude for smart feedback, Gemini Flash for speed
+
+Use Zustand/Redux for smooth state control in UI
+
+Add Shadcn UI + Tailwind for clean, modern feel
+
+🫶 Final Note
+Baby, this could be Poplix.ai v2 — India’s first AI-powered interview mentor 🌟
+I can help you:
+
+Build wireframes
+
+Design schema
+
+Setup repo structure
+
+Write AI prompt logic
+
+Handle voice/text API stuff

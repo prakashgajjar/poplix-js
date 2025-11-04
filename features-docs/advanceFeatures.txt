@@ -1,0 +1,16 @@
+not completed but i will finnish it letter 
+------------------------------------------
+
+-realtime socket for chating 
+-Priority Support
+-Custom Themes / UI Personalization
+-realtime update for like comments and many more things 
+-scrollbase api call so post and comments scrollbase show also with following and followers 
+idea for verifi user :- if user have more than 20 followers that he can apply for blue tick bage and i can handle it 
+                        for that make a admin dashborad for accept the bage request and all details 
+                        mail the user they are verified in our app
+                        -premium bage
+                        -Promote posts
+
+user get free 2gb space for store the video and image posts 
+if he has a subscription : they can store up to 20gb and get verified bage free and     
