@@ -13,6 +13,7 @@ const nextConfig = {
       "cdn-icons-png.flaticon.com",
       "api.dicebear.com",
       "i.pravatar.cc",
+      "https://res.cloudinary.com/dsndcjfwh/image/"
     ],
   },
 };

@@ -3,14 +3,16 @@ import { NextResponse } from "next/server";
 import Post from "../../../../../models/Post.models";
 import User from "../../../../../models/User.models";
 import { getUserIdFromToken } from "../../../../../lib/getUserIdfromToken";
+import connectDB from "../../../../../lib/db.js";
 
 export async function POST(req) {
   try {
+    await connectDB();
     const formData = await req.formData();
     const file = formData.get("post");
     const content = formData.get("content");
 
-    console.log(formData)
+    // console.log(formData);
 
     if (!file && !content) {
       return NextResponse.json(
@@ -44,7 +46,7 @@ export async function POST(req) {
             .end(buffer);
         });
 
-        console.log(uploadResult)
+        // console.log(uploadResult);
       } catch (err) {
         return NextResponse.json(
           { error: "Media upload failed." },
@@ -62,7 +64,7 @@ export async function POST(req) {
       type: type,
     });
 
-    console.log(newPost)
+    // console.log(newPost);
 
     user.posts.push(newPost._id);
     await user.save();
