@@ -108,23 +108,8 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-zinc-900 to-gray-800 text-white px-4 relative">
       {loading && <Loader />} {/* show loader overlay */}
 
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-10">
+      <div className="max-w-6xl w-full md:grid-cols-2 gap-8 items-center py-10">
         {/* Left: Animated Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={show ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 1 }}
-          className="hidden md:block"
-        >
-          <Image
-            src="/images/login.png"
-            alt="Modern App Preview"
-            width={800}
-            height={500}
-            layout="responsive"
-            className="rounded-2xl"
-          />
-        </motion.div>
 
         {/* Right: Auth Form */}
         <motion.div
@@ -243,6 +228,7 @@ export default function LoginPage() {
                   <button
                     type="submit"
                     disabled={!valid}
+
                     className={`btn-style ${valid ? "bg-green-600 hover:bg-green-700" : "bg-zinc-700 cursor-not-allowed"}`}
                   >
                     Sign Up
@@ -277,7 +263,11 @@ export default function LoginPage() {
               <>
                 Don’t have an account?{' '}
                 <button
-                  onClick={() => setIsLogin(false)}
+                  onClick={() => {
+                    setIsLogin(false)
+                    setData({ email: '', password: '', fullname: '', username: '' });
+                  }
+                  }
                   className="text-green-400 hover:underline"
                 >
                   Sign Up
@@ -288,9 +278,9 @@ export default function LoginPage() {
                 Already have an account?{' '}
                 <button
                   onClick={() => {
+                    setData({ email: '', password: '', fullname: '', username: '' });
                     setIsLogin(true);
                     setIsOtpVisible(false);
-                    setTimeout(() => window.location.reload(), 10);
                   }}
                   className="text-blue-400 hover:underline"
                 >
