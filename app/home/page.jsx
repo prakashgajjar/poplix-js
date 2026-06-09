@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = 'force-dynamic';
+
 import { Toaster } from 'react-hot-toast';
 import {
   FaHome, FaSearch, FaBell, FaUser,
